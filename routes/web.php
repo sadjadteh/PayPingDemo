@@ -1,5 +1,6 @@
 <?php
 
+use \sadjadteh\PayPing\PayPing;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +13,14 @@
 */
 
 Route::get('/', function () {
+    return PayPing::pay([
+        'amount' => 100,
+        'payerIdentity' => "09354775019",
+        'payerName' => 'سجاد طهرانچی',
+        'description' => 'این یک پرداخت تستی است',
+        'returnUrl' => "http://local.kalam",
+        'clientRefId' => '1234567890',
+    ]);
+
     return view('welcome');
 });

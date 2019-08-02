@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \sadjadteh\PayPing\PayPingServiceProvider::class,
 
         /*
          * Application Service Providers...

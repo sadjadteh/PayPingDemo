@@ -1,0 +1,21 @@
+{
+    "name": "sadjadteh/pay-ping",
+    "description": "This is a package for connecting to the PayPing web-services.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sadjad Tehranchi",
+            "email": "sadjadteh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "sadjadteh\\PayPing\\": "src/"
+        }
+    }
+}
