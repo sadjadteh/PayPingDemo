@@ -18,7 +18,7 @@ class PayRequest implements ValidationRequestObjectInterface
 
     public function __construct(array $payParams)
     {
-        $this->amount        = $payParams['amount'] ? intval($payParams['amount']) : null;
+        $this->amount        = isset($payParams['amount']) ? intval($payParams['amount']) : null;
         $this->payerIdentity = $payParams['payerIdentity'] ?? null;
         $this->payerName     = $payParams['payerName'] ?? null;
         $this->description   = $payParams['description'] ?? null;

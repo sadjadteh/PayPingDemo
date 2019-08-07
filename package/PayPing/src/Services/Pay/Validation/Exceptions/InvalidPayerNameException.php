@@ -4,7 +4,9 @@
 namespace sadjadteh\PayPing\Services\Pay\Validation\Exceptions;
 
 
-class InvalidPayerNameException extends \Exception
+use sadjadteh\PayPing\Services\Pay\Validation\Exceptions\Contracts\InvalidClientPayParamsException;
+
+class InvalidPayerNameException extends InvalidClientPayParamsException
 {
     protected $message = 'The "payerName" should be a string.';
 }

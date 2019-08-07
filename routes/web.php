@@ -18,9 +18,13 @@ Route::get('/', function () {
         'payerIdentity' => "09354775019",
         'payerName' => 'سجاد طهرانچی',
         'description' => 'این یک پرداخت تستی است',
-        'returnUrl' => "http://local.kalam",
+        'returnUrl' => "http://local.payping/verifyPage",
         'clientRefId' => '1234567890',
     ]);
 
     return view('welcome');
+});
+
+Route::Get('verifyPage', function () {
+
 });

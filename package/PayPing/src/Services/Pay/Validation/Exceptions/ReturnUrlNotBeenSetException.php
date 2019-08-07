@@ -4,7 +4,9 @@
 namespace sadjadteh\PayPing\Services\Pay\Validation\Exceptions;
 
 
-class ReturnUrlNotBeenSetException extends \Exception
+use sadjadteh\PayPing\Services\Pay\Validation\Exceptions\Contracts\InvalidClientPayParamsException;
+
+class ReturnUrlNotBeenSetException extends InvalidClientPayParamsException
 {
     protected $message = 'The "returnUrl" value in the pay method params is required.';
 }

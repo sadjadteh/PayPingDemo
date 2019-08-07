@@ -14,7 +14,7 @@ use sadjadteh\PayPing\Services\Validation\Contracts\ValidationRequestObjectInter
 
 class PayRequestValidator
 {
-    public function perform(ValidationRequestObjectInterface $payRequest)
+    public function validate(ValidationRequestObjectInterface $payRequest)
     {
         $validator = new DescriptionValidator();
         $validator = new PayerIdentityValidator($validator);

@@ -4,7 +4,9 @@
 namespace sadjadteh\PayPing\Services\Pay\Validation\Exceptions;
 
 
-class InvalidDescriptionException extends \Exception
+use sadjadteh\PayPing\Services\Pay\Validation\Exceptions\Contracts\InvalidClientPayParamsException;
+
+class InvalidDescriptionException extends InvalidClientPayParamsException
 {
     protected $message = 'The "description" should be a string.';
 }
