@@ -26,5 +26,8 @@ Route::get('/', function () {
 });
 
 Route::Get('verifyPage', function () {
-
+    Payping::verify([
+       'amount' => 100,
+        'refId' => request()->refid,
+    ]);
 });

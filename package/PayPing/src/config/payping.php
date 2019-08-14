@@ -10,5 +10,8 @@ return [
     /* This will be added to baseURI for get code (pay) request */
     'payURI' => 'pay/',
 
+    /* This will be added to baseURI for verification request */
+    'verifyURI' => 'pay/verify',
+
     'paymentPage' => 'pay/gotoipg/',
 ];

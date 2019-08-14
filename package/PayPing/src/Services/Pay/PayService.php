@@ -15,7 +15,7 @@ class PayService
         /* Build an object with params got from the user. This object helps us to validate these params easily. */
         $payRequest = new PayRequest($payParams);
 
-        /* Validating the request params got from the user. If the request is not valid, a suitable exception will be thrown. */
+        /* Validating the request params got from the user (developer). If the request is not valid, a suitable exception will be thrown. */
         $this->validateClientParams($payRequest);
 
         /* Send the params to the payping api and get the code. */
@@ -67,6 +67,13 @@ class PayService
         return (new PayResponse($response))->getCode();
     }
 
+    /**
+     * Redirect the user to the payping payment page.
+     *
+     * @param $code
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     private function goToPayPingPaymentPage($code)
     {
         $payPingPaymentPage = config('payping.baseURI') . config('payping.paymentPage') . $code;
